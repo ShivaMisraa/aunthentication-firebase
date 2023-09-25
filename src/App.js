@@ -4,9 +4,12 @@ import Layout from "./Components/Layout/Layout";
 import UserProfile from "./Components/Profile/UserProfile";
 import AuthPage from "./Pages/AuthPage";
 import HomePage from "./Pages/HomePage";
+import { AuthContextProvider } from "./Store/auth-context";
 
 function App() {
   return (
+    <AuthContextProvider>
+
     <Router>
       <Layout>
         <Switch>
@@ -22,6 +25,7 @@ function App() {
         </Switch>
       </Layout>
     </Router>
+    </AuthContextProvider>
   );
 }
 
